@@ -71,6 +71,18 @@ namespace entityisfun
                 cbContactTitles.SelectedIndex = 0;
             }
         }
+        private void DisplayCategories()
+        {
+            using (var dc = new NorthwindEntities())
+            {
+                var categories = (from c in dc.Categories
+                    orderby c.CategoryName
+                    select c.CategoryName);
+                cbCategories.Items.AddRange(categories.ToArray());
+                cbCategories.SelectedIndex = 0;
+            } 
+
+        }
 
         private void cbFilter_CheckedChanged(object sender, EventArgs e)
         {
@@ -80,6 +92,7 @@ namespace entityisfun
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             DisplayCustomers();
+            DisplayCategories();
         }
     }
 }

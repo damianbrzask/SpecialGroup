@@ -38,6 +38,7 @@
             this.lbContactTitles = new System.Windows.Forms.Label();
             this.tbCustomerName = new System.Windows.Forms.TextBox();
             this.lbCustomerName = new System.Windows.Forms.Label();
+            this.cbCategories = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.gbFiltering.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +48,7 @@
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomers.Location = new System.Drawing.Point(13, 13);
             this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.Size = new System.Drawing.Size(566, 247);
+            this.dgvCustomers.Size = new System.Drawing.Size(699, 247);
             this.dgvCustomers.TabIndex = 0;
             // 
             // cbFilter
@@ -63,6 +64,7 @@
             // 
             // gbFiltering
             // 
+            this.gbFiltering.Controls.Add(this.cbCategories);
             this.gbFiltering.Controls.Add(this.btnRefresh);
             this.gbFiltering.Controls.Add(this.cbCountries);
             this.gbFiltering.Controls.Add(this.cbContactTitles);
@@ -72,7 +74,7 @@
             this.gbFiltering.Controls.Add(this.lbCustomerName);
             this.gbFiltering.Location = new System.Drawing.Point(13, 290);
             this.gbFiltering.Name = "gbFiltering";
-            this.gbFiltering.Size = new System.Drawing.Size(566, 64);
+            this.gbFiltering.Size = new System.Drawing.Size(699, 64);
             this.gbFiltering.TabIndex = 2;
             this.gbFiltering.TabStop = false;
             this.gbFiltering.Text = "Filtering";
@@ -80,7 +82,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(485, 35);
+            this.btnRefresh.Location = new System.Drawing.Point(618, 35);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 6;
@@ -93,7 +95,7 @@
             this.cbCountries.FormattingEnabled = true;
             this.cbCountries.Items.AddRange(new object[] {
             "All"});
-            this.cbCountries.Location = new System.Drawing.Point(300, 37);
+            this.cbCountries.Location = new System.Drawing.Point(278, 37);
             this.cbCountries.Name = "cbCountries";
             this.cbCountries.Size = new System.Drawing.Size(121, 21);
             this.cbCountries.TabIndex = 5;
@@ -111,7 +113,7 @@
             // lbCountries
             // 
             this.lbCountries.AutoSize = true;
-            this.lbCountries.Location = new System.Drawing.Point(297, 20);
+            this.lbCountries.Location = new System.Drawing.Point(285, 20);
             this.lbCountries.Name = "lbCountries";
             this.lbCountries.Size = new System.Drawing.Size(43, 13);
             this.lbCountries.TabIndex = 3;
@@ -142,11 +144,21 @@
             this.lbCustomerName.TabIndex = 0;
             this.lbCustomerName.Text = "Name";
             // 
+            // cbCategories
+            // 
+            this.cbCategories.FormattingEnabled = true;
+            this.cbCategories.Items.AddRange(new object[] {
+            "All"});
+            this.cbCategories.Location = new System.Drawing.Point(431, 36);
+            this.cbCategories.Name = "cbCategories";
+            this.cbCategories.Size = new System.Drawing.Size(121, 21);
+            this.cbCategories.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 368);
+            this.ClientSize = new System.Drawing.Size(724, 374);
             this.Controls.Add(this.gbFiltering);
             this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.dgvCustomers);
@@ -172,6 +184,7 @@
         private System.Windows.Forms.ComboBox cbContactTitles;
         private System.Windows.Forms.Label lbCountries;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.ComboBox cbCategories;
     }
 }
 

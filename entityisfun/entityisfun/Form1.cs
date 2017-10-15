@@ -84,6 +84,22 @@ namespace entityisfun
 
         }
 
+        private void RemoveSelectedCountry()
+        {
+           
+
+        }
+
+        private void InsertNewCityIntoSupliers()
+        {
+           
+          NorthwindEntities dataContext = new NorthwindEntities();
+            Supplier country = dataContext.Suppliers.First();
+            country.Country = cbCategories.Text.ToString();
+            dataContext.SaveChanges();
+
+        }
+
         private void cbFilter_CheckedChanged(object sender, EventArgs e)
         {
             gbFiltering.Visible = cbFilter.Checked;
@@ -93,6 +109,11 @@ namespace entityisfun
         {
             DisplayCustomers();
             DisplayCategories();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InsertNewCityIntoSupliers();
         }
     }
 }

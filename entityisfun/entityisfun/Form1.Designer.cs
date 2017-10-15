@@ -31,6 +31,7 @@
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.cbFilter = new System.Windows.Forms.CheckBox();
             this.gbFiltering = new System.Windows.Forms.GroupBox();
+            this.cbCategories = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.cbCountries = new System.Windows.Forms.ComboBox();
             this.cbContactTitles = new System.Windows.Forms.ComboBox();
@@ -38,7 +39,7 @@
             this.lbContactTitles = new System.Windows.Forms.Label();
             this.tbCustomerName = new System.Windows.Forms.TextBox();
             this.lbCustomerName = new System.Windows.Forms.Label();
-            this.cbCategories = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.gbFiltering.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             // 
             // gbFiltering
             // 
+            this.gbFiltering.Controls.Add(this.button1);
             this.gbFiltering.Controls.Add(this.cbCategories);
             this.gbFiltering.Controls.Add(this.btnRefresh);
             this.gbFiltering.Controls.Add(this.cbCountries);
@@ -79,6 +81,20 @@
             this.gbFiltering.TabStop = false;
             this.gbFiltering.Text = "Filtering";
             this.gbFiltering.Visible = false;
+            // 
+            // cbCategories
+            // 
+            this.cbCategories.FormattingEnabled = true;
+            this.cbCategories.Items.AddRange(new object[] {
+            "All",
+            "Poland2",
+            "nowykraj2",
+            "nowykraj3",
+            "nowykraj4"});
+            this.cbCategories.Location = new System.Drawing.Point(431, 36);
+            this.cbCategories.Name = "cbCategories";
+            this.cbCategories.Size = new System.Drawing.Size(121, 21);
+            this.cbCategories.TabIndex = 7;
             // 
             // btnRefresh
             // 
@@ -144,15 +160,15 @@
             this.lbCustomerName.TabIndex = 0;
             this.lbCustomerName.Text = "Name";
             // 
-            // cbCategories
+            // button1
             // 
-            this.cbCategories.FormattingEnabled = true;
-            this.cbCategories.Items.AddRange(new object[] {
-            "All"});
-            this.cbCategories.Location = new System.Drawing.Point(431, 36);
-            this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(121, 21);
-            this.cbCategories.TabIndex = 7;
+            this.button1.Location = new System.Drawing.Point(570, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "del";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -185,6 +201,7 @@
         private System.Windows.Forms.Label lbCountries;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ComboBox cbCategories;
+        private System.Windows.Forms.Button button1;
     }
 }
 

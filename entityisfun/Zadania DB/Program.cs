@@ -68,15 +68,40 @@ namespace Zadania_DB
 
 
             Console.WriteLine();
+            Console.WriteLine("Zadanie 8.1");
+            int k = 4, l = 3;
+            if (k % l == 0)
+            {
+                Console.WriteLine("reszta z dzielenia wynosi 0");
+            }
+            else
+            {
+                Console.WriteLine("reszta z dzielenia różna od 0");
+            }
+
+            Console.WriteLine("Zadanie 8.2");
+            Console.WriteLine("do zrobienia");
+
+
+            Console.WriteLine("Zadanie 8.3");
+            Console.WriteLine("podaj liczbę: ");
+            int ab = Int32.Parse(Console.ReadLine());
+
+            if (ab < 0 )
+            {
+                Console.WriteLine("Wartość bezwzględna podanej liczby to: {0} ", -ab);
+                
+            }
+            else
+            {
+                Console.WriteLine("Wartość bezwzględna podanej liczby to: {0}",  ab);
+            }
 
 
 
 
 
-
-
-
-
+            Console.ReadLine();
             Console.ReadLine();
         }
     }
